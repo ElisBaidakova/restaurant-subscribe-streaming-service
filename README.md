@@ -37,12 +37,7 @@
 
 Kafka используется как источник входящих событий и как выходной канал для дальнейшей обработки.
 
-Подключение настроено с использованием:
-
-* `SASL_SSL`;
-* `SCRAM-SHA-512`;
-* SSL-сертификата;
-* отдельных input и output topics.
+Подключение настроено с использованием SASL/SSL и SCRAM-SHA-512.
 
 ### PostgreSQL
 
@@ -54,7 +49,7 @@ PostgreSQL используется для получения информаци
 
 Для Spark Structured Streaming настроено сохранение checkpoint:
 
-```python id="l92x6n"
+```python
 .option("checkpointLocation", config.CHECKPOINT_LOCATION)
 ```
 
@@ -78,7 +73,7 @@ Checkpoint используется для сохранения состояни
 3. Передать учетные данные через переменные окружения или локальный файл с секретами.
 4. Запустить Spark-приложение:
 
-```bash id="wz7wf5"
+```bash
 spark-submit streaming.py
 ```
 
@@ -99,10 +94,20 @@ spark-submit streaming.py
 
 ## Технологии
 
-`Python` `Apache Spark` `Spark Structured Streaming` `Apache Kafka` `PostgreSQL` `JDBC` `JSON` `SASL/SSL` `SCRAM-SHA-512`
+* **Язык:** Python
+* **Обработка данных:** Apache Spark, Spark Structured Streaming
+* **Потоковая обработка:** Apache Kafka
+* **Хранение:** PostgreSQL
+* **Интеграция:** JDBC
+* **Формат данных:** JSON
+* **Безопасность:** SASL/SSL, SCRAM-SHA-512
 
 ## Результат
 
 В результате реализован потоковый ETL-пайплайн, который связывает события о рекламных кампаниях ресторанов с данными о подписчиках и автоматически передаёт сформированные события в системы хранения и дальнейшей обработки.
 
 Проект демонстрирует практическое применение Apache Kafka и Spark Structured Streaming для построения потокового решения с интеграцией PostgreSQL.
+
+## Topics
+
+`python` `apache-spark` `spark-structured-streaming` `apache-kafka` `postgresql` `streaming` `data-engineering` `etl` `data-pipeline`
