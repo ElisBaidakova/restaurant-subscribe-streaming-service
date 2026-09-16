@@ -54,11 +54,35 @@ PostgreSQL используется для получения информаци
 
 Для Spark Structured Streaming настроено сохранение checkpoint:
 
-```python
+```python id="l92x6n"
 .option("checkpointLocation", config.CHECKPOINT_LOCATION)
 ```
 
 Checkpoint используется для сохранения состояния потоковой обработки и восстановления после перезапуска приложения.
+
+## Системные требования
+
+* Python 3.9+
+* Apache Spark 3.3+
+* Java 8 или 11
+* Apache Kafka
+* PostgreSQL 12+
+* SSL-сертификат для подключения к Kafka
+
+Для работы приложения необходим доступ к Kafka и PostgreSQL.
+
+## Развёртывание и запуск
+
+1. Клонировать репозиторий.
+2. Настроить параметры Kafka и PostgreSQL в `config.py`.
+3. Передать учетные данные через переменные окружения или локальный файл с секретами.
+4. Запустить Spark-приложение:
+
+```bash id="wz7wf5"
+spark-submit streaming.py
+```
+
+> Файлы с паролями, сертификатами и другими секретами не должны добавляться в Git-репозиторий.
 
 ## Конфигурация
 
@@ -75,15 +99,7 @@ Checkpoint используется для сохранения состояни
 
 ## Технологии
 
-* Python
-* Apache Spark
-* Spark Structured Streaming
-* Apache Kafka
-* PostgreSQL
-* JDBC
-* JSON
-* SASL/SSL
-* SCRAM-SHA-512
+`Python` `Apache Spark` `Spark Structured Streaming` `Apache Kafka` `PostgreSQL` `JDBC` `JSON` `SASL/SSL` `SCRAM-SHA-512`
 
 ## Результат
 
