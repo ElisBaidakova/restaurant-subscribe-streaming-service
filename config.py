@@ -5,9 +5,9 @@
 
 KAFKA_BOOTSTRAP_SERVERS = "rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091" 
 
-KAFKA_INPUT_TOPIC = "student.topic.cohort12.baidakova" 
+KAFKA_INPUT_TOPIC = "restaurant_promotions_input" 
 
-KAFKA_OUTPUT_TOPIC = "student.topic.cohort12.baidakova.out" 
+KAFKA_OUTPUT_TOPIC = "restaurant_promotions_output" 
 
 KAFKA_SECURITY_PROTOCOL = "SASL_SSL" 
 
